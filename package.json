@@ -52,5 +52,22 @@
     "postcss": "^8",
     "prisma": "^6.2.1",
     "tailwindcss": "^3.4.1"
-  }
+  },
+  "description": "![sensai](https://github.com/user-attachments/assets/eee79242-4056-4d19-b655-2873788979e1)",
+  "main": "middleware.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piyush-eon/ai-career-coach.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/piyush-eon/ai-career-coach/issues"
+  },
+  "homepage": "https://github.com/piyush-eon/ai-career-coach#readme"
 }
