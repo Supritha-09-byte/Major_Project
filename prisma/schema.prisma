@@ -97,3 +97,42 @@ model IndustryInsight {
 
   @@index([industry])
 }
+
+model InterviewHistory {
+  id        String   @id @default(cuid())
+  userId    String?
+  user      User?    @relation(fields: [userId], references: [id])
+  topic     String
+  question  String   @db.Text
+  answer    String   @db.Text
+  feedback  String   @db.Text
+  rating    Int
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+}
+
+model Gamification {
+  id        String   @id @default(cuid())
+  userId    String   @unique
+  user      User     @relation(fields: [userId], references: [id])
+  points    Int      @default(0)
+  level     Int      @default(1)
+  streak    Int      @default(0)
+  badges    String[] @default([])
+  updatedAt DateTime @updatedAt
+}
+
+model InterviewHistory {
+  id        String   @id @default(cuid())
+  userId    String?
+  user      User?    @relation(fields: [userId], references: [id])
+  topic     String
+  question  String   @db.Text
+  answer    String   @db.Text
+  feedback  String   @db.Text
+  rating    Int
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+}
